@@ -1,42 +1,48 @@
 {
   "schemaVersion": 1,
   "application": "Lumio Stream",
-  "version": "0.5.0",
+  "creator": "yashas raj",
+  "version": "0.6.0",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDateUTC": "2026-10-26T16:18:47.011054+00:00",
+  "buildDateUTC": "2026-10-26T18:37:50.015038+00:00",
   "status": "verified-development-preview",
-  "signed": false,
+  "developerIDSigned": false,
   "notarized": false,
   "artifact": {
-    "fileName": "Lumio-Stream-macOS-v0.5.0.dmg",
-    "bytes": 298325590,
-    "sha256": "2cf7846c5a1e6815e4286adb01cb41c0cf6fb3bae2218fadae3aed9d80dd683a"
+    "fileName": "Lumio-Stream-macOS-v0.6.0.dmg",
+    "bytes": 417930831,
+    "sha256": "7fc469aee93b0e5fc3c95818bee503e767c72d245dc0cf6800c9f228bb91adac"
   },
   "source": {
     "repository": "https://github.com/yashasraj615/Lumio-Stream",
     "branch": "mac",
-    "commit": "1b91b13595566a8fbde87c642244b2913ee6f861"
+    "commit": "3c664925f873e45199523c2f233e00a8a50f1730"
   },
   "verification": {
     "productionBuild": "passed",
-    "fastTests": {
-      "passed": 14,
-      "failed": 0
-    },
-    "selectedSessionRevocation": "passed against bundled engine",
-    "nativeEndpointCopy": "passed in isolated Electron profile on port 3652",
-    "videoPauseFeedback": "passed",
-    "nextEpisodeFocusPreview": "bounded at 1280x720, Escape dismisses",
-    "diskImageChecksum": "hdiutil verify VALID",
-    "packageSourceConsistency": "key desktop/gateway/session/build manifest files match",
-    "temporaryProfiles": "removed"
+    "fastNodeTests": 15,
+    "tunnelSupervisor": "simulated process/origin/readiness/retry/stop check passed",
+    "actualLaunchAgent": "passed in source and final packaged app; same service PID survives complete Admin exit and reopen",
+    "nativeCommandQ": "passed; Administration exited and same server remained ready",
+    "stopStartAndAccessBoundary": "passed with real engine and viewer account",
+    "mobileLogin": "360x780, no horizontal overflow",
+    "mobileNavigation": "Home, Directory, Playlist, Favorites, Settings; portrait and landscape",
+    "expandedAudio": "actual synthetic MP3, no mini nodes or gap; minimized bar clears nav by 12px; desktop reaches bottom",
+    "pwaInstallUI": "synthetic lifecycle events and fallback guidance; no real installation claimed",
+    "nativeBrandingAndInstaller": "creator credit verified in packaged app; mounted DMG/Finder icon and Applications shortcut inspected",
+    "iconsAndBundle": "valid ICNS roundtrip, approved icon bytes and distinct server bundle ID inspected",
+    "portableFrameworks": "29 valid relative symlinks, local ICU resource, no development-only absolute links",
+    "dmg": "hdiutil verify VALID",
+    "packageConsistency": "key desktop/server/tunnel/build manifest match final source",
+    "disposableData": "test services, profiles, users, media, browser state and staged-helper crash reports removed"
   },
   "limitations": [
-    "Unsigned and not notarized",
-    "Windows port not complete",
-    "New tooltip placement checked in desktop browser only",
-    "Complete bundled FFmpeg corresponding-source archive and clean-machine/Gatekeeper qualification remain public-distribution gates"
+    "Existing system Cloudflare connector preserved; explicit one-time migration required for Lumio-owned management",
+    "No physical display-off or lock test",
+    "No real public Cloudflare end-to-end or real PWA installation test",
+    "No completed Windows/Intel port or clean-machine Gatekeeper qualification",
+    "Unsigned/non-notarized preview; full FFmpeg corresponding-source archive remains a public-distribution gate"
   ]
 }

@@ -1,13 +1,13 @@
-# Lumio Stream 0.5.0
+# Lumio Stream 0.6.0
 
-macOS 14+ / Apple silicon · unsigned development preview · 26 October 2026
+macOS 14+ / Apple silicon · unsigned development preview
 
-- Discreet “Made by Ashes Raj” credits in native administration and the Media Center.
-- Endpoint copying now uses Electron's native clipboard and the running host's actual address. Success appears only after the native write resolves; failures include a selectable manual-copy address.
-- Connected sessions show user, client/device, media, paused/playing state and last activity. Disconnect confirms interruption, revokes the exact selected login through engine logout, closes its streams, and verifies disappearance. Other logins stay signed in; the current administration window uses Sign out instead.
-- Pausing video briefly displays a central icon, including keyboard and OS media actions. Feedback ignores seeking while already paused and respects reduced motion.
-- Next Episode previews use collision-aware positioning inside the actual player and visual viewport, with keyboard focus, Escape dismissal and wrapped text.
+- Correct creator credit: **yashas raj**.
+- Independent per-user background server and tray; fully quitting Administration preserves streaming. Reopening reconnects to the same service. Explicit Stop and tray Quit retain clear server-stop semantics.
+- Optional server-owned Cloudflare supervision with real local-origin and edge-readiness checks, safe token files, bounded retries, synchronized shutdown and duplicate system-connector detection. Existing external connectors require an explicit one-time migration and are not silently modified.
+- Validated macOS iconset → Apple iconutil → ICNS pipeline shared with local logo/PWA/tray assets; installer uses the approved Lumio icon.
+- Exact mobile navigation: Home, Directory, Playlist, Favorites, Settings. Narrow login no longer uses desktop-sized spacing.
+- Top install/update notifications reserve their measured height. Settings always offers installation or accurate browser guidance; dismissal and confirmed installed state remain distinct.
+- Expanded audio fills its player viewport and removes the obsolete mini-player reservation. Minimized playback restores only the floating bar above mobile navigation.
 
-All 0.4 features remain: categorized metadata search, media menus and membership, avatars, scan status, TV group navigation, floating music player and last-ten-seconds autoplay card. See RELEASE_NOTES_0.4.md for that update.
-
-This is an unsigned, non-notarized preview. Windows is planned. Clean-machine/Gatekeeper qualification and complete bundled FFmpeg corresponding-source archiving remain distribution gates. This update does not claim an exhaustive codec/device retest or complete Jellyfin parity.
+No physical lock/display-off, real public Cloudflare tunnel, real browser installation, Windows or clean-machine Gatekeeper qualification is claimed. The existing system Cloudflare service was preserved. See BACKGROUND_SERVICE.md and VERIFICATION_REPORT.md for setup, evidence and limits.
