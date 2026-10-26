@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "application": "Lumio Stream",
+  "version": "0.5.0",
+  "platform": "macOS",
+  "architecture": "arm64",
+  "minimumOS": "14.0",
+  "buildDateUTC": "2026-10-26T16:18:47.011054+00:00",
+  "status": "verified-development-preview",
+  "signed": false,
+  "notarized": false,
+  "artifact": {
+    "fileName": "Lumio-Stream-macOS-v0.5.0.dmg",
+    "bytes": 298325590,
+    "sha256": "2cf7846c5a1e6815e4286adb01cb41c0cf6fb3bae2218fadae3aed9d80dd683a"
+  },
+  "source": {
+    "repository": "https://github.com/yashasraj615/Lumio-Stream",
+    "branch": "mac",
+    "commit": "1b91b13595566a8fbde87c642244b2913ee6f861"
+  },
+  "verification": {
+    "productionBuild": "passed",
+    "fastTests": {
+      "passed": 14,
+      "failed": 0
+    },
+    "selectedSessionRevocation": "passed against bundled engine",
+    "nativeEndpointCopy": "passed in isolated Electron profile on port 3652",
+    "videoPauseFeedback": "passed",
+    "nextEpisodeFocusPreview": "bounded at 1280x720, Escape dismisses",
+    "diskImageChecksum": "hdiutil verify VALID",
+    "packageSourceConsistency": "key desktop/gateway/session/build manifest files match",
+    "temporaryProfiles": "removed"
+  },
+  "limitations": [
+    "Unsigned and not notarized",
+    "Windows port not complete",
+    "New tooltip placement checked in desktop browser only",
+    "Complete bundled FFmpeg corresponding-source archive and clean-machine/Gatekeeper qualification remain public-distribution gates"
+  ]
+}
