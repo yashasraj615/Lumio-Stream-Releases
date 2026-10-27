@@ -23,6 +23,6 @@
   "limitations": [
     "No playback test suite, sleep/reboot or clean-machine Gatekeeper qualification",
     "macOS Apple silicon only; Windows/Intel not qualified",
-    "Bundled runtime dependency corresponding-source completeness not certified; see source availability notes"
+    "Bundled runtime dependency corresponding-source completeness not certified"
   ]
 }
