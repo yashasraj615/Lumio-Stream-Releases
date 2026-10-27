@@ -27,6 +27,6 @@
   "limitations": [
     "Settings documentation is source/configuration audited, not an interactive walkthrough of every native dialog/provider/hardware path",
     "No broad playback suite, physical sleep/reboot, Windows/Intel or clean-machine Gatekeeper qualification",
-    "Bundled runtime dependency corresponding-source completeness not certified; see source availability notes"
+    "Bundled runtime dependency corresponding-source completeness not certified"
   ]
 }

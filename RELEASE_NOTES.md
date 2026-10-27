@@ -7,3 +7,6 @@ macOS 14+ / Apple silicon · unsigned, non-notarized preview
 - The independent main-branch website has authentic Your Music/video previews and a searchable illustrated product guide covering Administration and Media Center controls.
 
 Focused checks cover build, one resume/isolation/persistence regression, actual isolated player states, documentation targets/search and packaging/installation integrity. No broad playback suite is claimed. Existing platform, signing/notarization and runtime-source distribution limitations remain.
+
+
+Distribution downloads are limited to the installer, its SHA-256 checksum and release metadata. Application source archives, runtime-source bundles and source indexes are not distributed here. GitHub's automatic Source code ZIP/tar links contain this release repository's documents/metadata only; they are not the application source.
