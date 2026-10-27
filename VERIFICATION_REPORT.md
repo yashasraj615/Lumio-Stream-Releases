@@ -1,3 +1,3 @@
-# Focused verification · 0.8.3
+# Focused verification · 0.8.4
 
-Actual desktop Music Overview reproduced and visually inspected after the scoped fix. Shared disc, compact/expanded music player and mobile rules are unchanged. Production TypeScript/Vite/PWA build, notices and disk-image integrity pass. No broad test suite was launched. The public release contains only the installer, installer checksum and manifest.
+Actual Music collection and media-information views inspected after update. Download actions are removed for every media type; native download controls/context menus are suppressed. Dedicated download and original-file API requests return 403 before role dispatch. Four focused media-plane tests preserve normal playback, HLS and subtitle routes. This is not DRM; streams can still be captured by a client capable of playing them. Production TypeScript/Vite/PWA build, notices and disk-image integrity pass. No broad test suite was launched. The public release contains only the installer, installer checksum and manifest.

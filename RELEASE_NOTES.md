@@ -1,8 +1,9 @@
-# Lumio Stream 0.8.3
+# Lumio Stream 0.8.4
 
 macOS 14+ / Apple silicon · unsigned, non-notarized preview
 
-- Fix oversized fallback disc artwork on the desktop Music Overview. A desktop-only selector bounds the disc to 190–340px, capped at 35% of the summary container, leaving the existing title, metadata and actions visible.
-- Shared disc styling, compact/expanded music players and existing mobile Music Overview rules are unchanged. No backend behavior, library or playback changes.
+- Fix the oversized decorative disc on Music collection pages by restoring its intended 36px size with a scoped selector. Title-detail and player layouts are retained.
+- Remove Download original from all media-information views. Dedicated media-download and original-file routes are denied globally, including native administrators and saved old URLs. Media Center identities advertise downloading as disabled.
+- Remove native download controls/context menus from audio/video preview surfaces. Normal playback, seeking, adaptive streams and subtitles remain available. These restrictions remove file-export features; they do not provide DRM or prevent recording/capturing playable streams.
 
-Focused verification covers the actual desktop overview, TypeScript/Vite/PWA build, DMG integrity and distribution-asset checks. This is not an exhaustive playback/device test. Existing preview and platform qualification limits remain.
+Focused checks cover the actual collection layout and media information, global route denial, playback-route allowlists and the production build/package. No broad playback test was performed. Public distribution contains only the macOS installer, checksum and manifest.
