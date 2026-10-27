@@ -1,32 +1,30 @@
 {
   "product": "Lumio Stream",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-27T04:10:19.214Z",
+  "buildDate": "2026-10-27T05:31:16.308Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "ef385428be1b80cda5f00060d78b7d740178f292",
+  "sourceCommit": "e99448801ed3b5101e3fdbe035ca7e751a349be2",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.7.0.dmg",
-    "size": 418161643,
-    "sha256": "437729abe32f2235d051931ce2e5c38855ba6fe01916eb8adeaf7be6b84cef63"
+    "file": "Lumio-Stream-macOS-v0.8.0.dmg",
+    "size": 437167215,
+    "sha256": "36deb8718a2c4daad66d8d124e81f3610cf5f3233d6472d2078bdf9cb1636e39"
   },
   "status": "Verified build preview; unsigned and non-notarized",
   "checks": {
     "build": "TypeScript, Vite and PWA pass",
-    "focusedTests": "2 focused Node tests pass",
-    "realEngine": "Four separate series with independent Season 1, local NFO/artwork, safe inspection and permission checks",
-    "audio": "Actual MP3; browser Back preserves route and playback; mobile gap 0 and paused record verified",
-    "package": "hdiutil verify VALID; packaged source, build manifest, icon and service helper checked",
-    "cleanup": "Disposable profile, media, accounts, LaunchAgent and browser app state removed"
+    "focusedTests": "3 focused command, endpoint-diagnostics and connector-supervision tests pass",
+    "package": "hdiutil verify VALID; packaged and installed core source/version verified; official connector digest verified",
+    "live": "Existing Mac updated; local/public HTTP 200 with matching instance; real HTTPS sign-in and authenticated Movies page; native simplified setup exercised",
+    "persistence": "Administration quit preserves server/connector; controlled engine restart recovers public route; idle-sleep assertion observed; legacy service stopped and disabled",
+    "preservation": "Cold app/profile backup; four real library configurations unchanged; no test accounts or media created"
   },
   "limitations": [
-    "Cloudflare API responses simulated; no real credential/control-plane/public-hostname validation",
-    "Online metadata-provider match not asserted; local metadata/artwork fixture only",
-    "No physical display-off/lock, real PWA installation or clean-machine Gatekeeper qualification",
-    "New native panels build-checked/reviewed; no new native interaction walkthrough",
-    "Unsigned/non-notarized Apple silicon preview; Windows/Intel not qualified; corresponding-source distribution gates remain"
+    "No physical display-off/lock, forced sleep, logout/reboot or outage simulation",
+    "Playback was not exercised during this focused networking update",
+    "Unsigned/non-notarized Apple silicon preview; Windows/Intel and clean-machine Gatekeeper not qualified; corresponding-source distribution gates remain"
   ]
 }
