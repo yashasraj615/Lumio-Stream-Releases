@@ -1,12 +1,9 @@
-# Lumio Stream 0.8.0
+# Lumio Stream 0.8.1
 
 macOS 14+ / Apple silicon · unsigned, non-notarized preview
 
-- Two-input Cloudflare setup: paste the official installation command and your public HTTPS address. Lumio parses the credential safely, uses its bundled official connector, applies the hostname immediately and manages the child in the persistent server.
-- Separate account/process/tunnel/route/local/public checks. Actual HTTPS page and live instance verification catches stale DNS targets, wrong origins and misleading edge-only connectivity.
-- Strict local proxy/HTTPS-forwarding validation, secure cookies and exact-origin protection retained. Public checks have bounded timeouts, pinned public DNS resolution and full TLS validation using host trust stores.
-- Optional account APIs and manual networking remain in Advanced; no API key is needed for normal connector setup.
-- A targeted idle-system-sleep assertion keeps enabled remote access available while allowing display sleep. No global power/security settings are changed.
-- Native endpoint copy/open actions follow the running public URL immediately. Existing accounts, library metadata/history and media paths are preserved.
+- Direct music playback now becomes continuous smart shuffle when Shuffle is enabled, without needing a playlist. Existing suggestion ranking prioritizes unheard music across the accessible library, then continues randomly after completion.
+- A private per-user completion record avoids treating brief starts as completed listens. Cycle state follows the existing per-user queue persistence. Explicit album/playlist queues retain their normal shuffle behavior.
+- Current playback/position is preserved on activation; manual direct selections continue discovery. Missing, unauthorized and failed tracks cannot strand the sequence.
 
-See CLOUDFLARE_SETUP.md for setup/migration details and VERIFICATION_REPORT.md for actual checks and limits. Forced sleep, logout/reboot, network outages and provider incidents can still interrupt access. No Windows/Intel or clean-machine Gatekeeper qualification is claimed.
+See SMART_SHUFFLE.md for the completion definition and skipped-track behavior. No music test suite was run, as requested. TypeScript/Vite/PWA build and packaged/local version checks are the focused verification. Existing preview/platform and redistribution limitations still apply.

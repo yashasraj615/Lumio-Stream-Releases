@@ -1,30 +1,28 @@
 {
   "product": "Lumio Stream",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-27T05:31:16.308Z",
+  "buildDate": "2026-10-27T06:32:10.539Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "e99448801ed3b5101e3fdbe035ca7e751a349be2",
+  "sourceCommit": "ecbbf604c897481d33c4527b6d928344fba0cc4f",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.8.0.dmg",
-    "size": 437167215,
-    "sha256": "36deb8718a2c4daad66d8d124e81f3610cf5f3233d6472d2078bdf9cb1636e39"
+    "file": "Lumio-Stream-macOS-v0.8.1.dmg",
+    "size": 437215694,
+    "sha256": "0520eacd9e546cc3dff7f41b4aef4e3a731e4ded78c22682ed433568cda96ea6"
   },
-  "status": "Verified build preview; unsigned and non-notarized",
+  "status": "Unsigned, non-notarized development preview",
   "checks": {
-    "build": "TypeScript, Vite and PWA pass",
-    "focusedTests": "3 focused command, endpoint-diagnostics and connector-supervision tests pass",
-    "package": "hdiutil verify VALID; packaged and installed core source/version verified; official connector digest verified",
-    "live": "Existing Mac updated; local/public HTTP 200 with matching instance; real HTTPS sign-in and authenticated Movies page; native simplified setup exercised",
-    "persistence": "Administration quit preserves server/connector; controlled engine restart recovers public route; idle-sleep assertion observed; legacy service stopped and disabled",
-    "preservation": "Cold app/profile backup; four real library configurations unchanged; no test accounts or media created"
+    "build": "TypeScript/Vite/PWA production build passes",
+    "shuffleTests": "No shuffle test suite or playback fixtures run, as requested",
+    "package": "hdiutil verify VALID; packaged final UI manifest and server source match",
+    "installation": "Installed on existing Mac after cold app/profile backup; library configuration unchanged"
   },
   "limitations": [
-    "No physical display-off/lock, forced sleep, logout/reboot or outage simulation",
-    "Playback was not exercised during this focused networking update",
-    "Unsigned/non-notarized Apple silicon preview; Windows/Intel and clean-machine Gatekeeper not qualified; corresponding-source distribution gates remain"
+    "No playback test suite, sleep/reboot or clean-machine Gatekeeper qualification",
+    "macOS Apple silicon only; Windows/Intel not qualified",
+    "Bundled runtime dependency corresponding-source completeness not certified; see source availability notes"
   ]
 }
