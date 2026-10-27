@@ -1,32 +1,26 @@
 {
   "product": "Lumio Stream",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-27T09:50:30.179Z",
+  "buildDate": "2026-10-27T10:42:26.717Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "be2bdadb2a12ae0ef89ca678d1511ca75c12277c",
-  "websiteCommit": "2577fed53b55cd0789a76aebfe76230a71a03967",
+  "sourceCommit": "9cd87e3c959ba11f433adbd7339a75f0cc9a4c47",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.8.2.dmg",
-    "size": 437194906,
-    "sha256": "70e83a46dd4c2cb2038b5786e47b52c14971dd734776ce9329f6ad72826f37e9"
+    "file": "Lumio-Stream-macOS-v0.8.3.dmg",
+    "size": 437185100,
+    "sha256": "ce42e0069dbaf1f7a384c760cfcf7521f802594623307b2cb7272ae9a344a1bc"
   },
   "status": "Unsigned, non-notarized development preview",
   "checks": {
-    "build": "TypeScript/Vite/PWA build passes",
-    "resume": "Focused per-user resume, persistence, inclusive 90% completion and partial replay test passes; actual partial track resume verified",
-    "disc": "Actual isolated compact/expanded player running and paused states verified; reduced-motion CSS included",
-    "docs": "33 guides; 304 source-audited controls; 1574 internal targets pass; actual search, direct refresh and desktop/mobile navigation checked",
-    "package": "hdiutil verify VALID; installed core server/UI/disc files match source build",
-    "installation": "Cold app/profile backup; installed 0.8.2 ready; library configuration unchanged; existing public HTTPS endpoint returns 200 for same server",
-    "cleanup": "Isolated documentation account/profile/generated samples removed; temporary browser state cleared"
+    "scope": "Desktop music-detail fallback artwork sizing only; player/shared-disc/mobile style rules unchanged",
+    "visual": "Actual installed desktop Music Overview inspected; artwork and title/metadata/actions contained and visible",
+    "build": "TypeScript/Vite/PWA build and release notices pass",
+    "package": "hdiutil verify VALID; installed app version and packaged UI verified"
   },
   "limitations": [
-    "Settings documentation is source/configuration audited, not an interactive walkthrough of every native dialog/provider/hardware path",
-    "No broad playback suite, physical sleep/reboot, Windows/Intel or clean-machine Gatekeeper qualification",
-    "Bundled runtime dependency corresponding-source completeness not certified"
+    "No broad playback or device test suite; no Windows/Intel or clean-machine signing/notarization qualification"
   ]
 }
