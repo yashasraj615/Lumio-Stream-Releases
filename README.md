@@ -1,6 +1,6 @@
 # Lumio Stream Releases
 
-Public installer repository for Lumio Stream. Application source and developer instructions live on [Lumio-Stream/mac](https://github.com/yashasraj615/Lumio-Stream/tree/mac).
+Public installer distribution repository for Lumio Stream. Application source stays in the private original Lumio-Stream repository.
 
 ## Latest verified preview
 
@@ -11,3 +11,7 @@ Installers are GitHub Release assets, never ordinary Git commits. Names use the 
 Windows `.exe` installers are planned. No completed or verified Windows release is available. Future names will use `Lumio-Stream-Windows-vX.Y.Z.exe` after actual Windows qualification.
 
 yashas raj
+
+## Distribution boundaries
+
+Only approved installers, installer checksums and necessary release metadata are distributed here. See [distribution policy](DISTRIBUTION_POLICY.md) and [cleanup record](PUBLIC_RELEASE_REVIEW.md). No application-source or runtime-source downloads are provided. GitHub’s automatically generated Source code ZIP/tar links snapshot this distribution repository’s documents/metadata; they do not expose the private application repository.
