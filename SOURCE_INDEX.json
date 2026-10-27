@@ -28,5 +28,11 @@
     "sourceCommit": "ecbbf604c897481d33c4527b6d928344fba0cc4f",
     "file": "Lumio-Stream-v0.8.1-source.tar.gz",
     "sha256": "e6892dfc493c879fdd447f39b297c7c1ec11fe9c0bab84520b547b823498d344"
+  },
+  {
+    "version": "0.8.2",
+    "sourceCommit": "be2bdadb2a12ae0ef89ca678d1511ca75c12277c",
+    "file": "Lumio-Stream-v0.8.2-source.tar.gz",
+    "sha256": "beb2a0f76f21d4dc43d03435be806943714f1d61a83ea61f80516ca4e2111f7c"
   }
 ]

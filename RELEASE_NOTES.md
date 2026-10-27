@@ -1,9 +1,9 @@
-# Lumio Stream 0.8.1
+# Lumio Stream 0.8.2
 
 macOS 14+ / Apple silicon · unsigned, non-notarized preview
 
-- Direct music playback now becomes continuous smart shuffle when Shuffle is enabled, without needing a playlist. Existing suggestion ranking prioritizes unheard music across the accessible library, then continues randomly after completion.
-- A private per-user completion record avoids treating brief starts as completed listens. Cycle state follows the existing per-user queue persistence. Explicit album/playlist queues retain their normal shuffle behavior.
-- Current playback/position is preserved on activation; manual direct selections continue discovery. Missing, unauthorized and failed tracks cannot strand the sequence.
+- Shared approved branded disc across expanded/compact music players and decorative music fallback surfaces. Existing album art is preserved. Rotation follows active playback, pauses smoothly and respects reduced motion.
+- Continue listening now includes only unfinished positive music positions below 90%. Completed tracks leave the row; partial replays may return. Per-user positions persist separately from completion history and resume from the latest saved point.
+- The independent main-branch website has authentic Your Music/video previews and a searchable illustrated product guide covering Administration and Media Center controls.
 
-See SMART_SHUFFLE.md for the completion definition and skipped-track behavior. No music test suite was run, as requested. TypeScript/Vite/PWA build and packaged/local version checks are the focused verification. Existing preview/platform and redistribution limitations still apply.
+Focused checks cover build, one resume/isolation/persistence regression, actual isolated player states, documentation targets/search and packaging/installation integrity. No broad playback suite is claimed. Existing platform, signing/notarization and runtime-source distribution limitations remain.

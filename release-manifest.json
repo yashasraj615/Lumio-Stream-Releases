@@ -1,28 +1,32 @@
 {
   "product": "Lumio Stream",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-27T06:32:10.539Z",
+  "buildDate": "2026-10-27T09:50:30.179Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "ecbbf604c897481d33c4527b6d928344fba0cc4f",
+  "sourceCommit": "be2bdadb2a12ae0ef89ca678d1511ca75c12277c",
+  "websiteCommit": "2577fed53b55cd0789a76aebfe76230a71a03967",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.8.1.dmg",
-    "size": 437215694,
-    "sha256": "0520eacd9e546cc3dff7f41b4aef4e3a731e4ded78c22682ed433568cda96ea6"
+    "file": "Lumio-Stream-macOS-v0.8.2.dmg",
+    "size": 437194906,
+    "sha256": "70e83a46dd4c2cb2038b5786e47b52c14971dd734776ce9329f6ad72826f37e9"
   },
   "status": "Unsigned, non-notarized development preview",
   "checks": {
-    "build": "TypeScript/Vite/PWA production build passes",
-    "shuffleTests": "No shuffle test suite or playback fixtures run, as requested",
-    "package": "hdiutil verify VALID; packaged final UI manifest and server source match",
-    "installation": "Installed on existing Mac after cold app/profile backup; library configuration unchanged"
+    "build": "TypeScript/Vite/PWA build passes",
+    "resume": "Focused per-user resume, persistence, inclusive 90% completion and partial replay test passes; actual partial track resume verified",
+    "disc": "Actual isolated compact/expanded player running and paused states verified; reduced-motion CSS included",
+    "docs": "33 guides; 304 source-audited controls; 1574 internal targets pass; actual search, direct refresh and desktop/mobile navigation checked",
+    "package": "hdiutil verify VALID; installed core server/UI/disc files match source build",
+    "installation": "Cold app/profile backup; installed 0.8.2 ready; library configuration unchanged; existing public HTTPS endpoint returns 200 for same server",
+    "cleanup": "Isolated documentation account/profile/generated samples removed; temporary browser state cleared"
   },
   "limitations": [
-    "No playback test suite, sleep/reboot or clean-machine Gatekeeper qualification",
-    "macOS Apple silicon only; Windows/Intel not qualified",
+    "Settings documentation is source/configuration audited, not an interactive walkthrough of every native dialog/provider/hardware path",
+    "No broad playback suite, physical sleep/reboot, Windows/Intel or clean-machine Gatekeeper qualification",
     "Bundled runtime dependency corresponding-source completeness not certified; see source availability notes"
   ]
 }

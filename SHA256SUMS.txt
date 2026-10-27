@@ -1,1 +1,2 @@
-0520eacd9e546cc3dff7f41b4aef4e3a731e4ded78c22682ed433568cda96ea6  Lumio-Stream-macOS-v0.8.1.dmg
+70e83a46dd4c2cb2038b5786e47b52c14971dd734776ce9329f6ad72826f37e9  Lumio-Stream-macOS-v0.8.2.dmg
+beb2a0f76f21d4dc43d03435be806943714f1d61a83ea61f80516ca4e2111f7c  Lumio-Stream-v0.8.2-source.tar.gz
