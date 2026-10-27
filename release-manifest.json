@@ -1,48 +1,32 @@
 {
-  "schemaVersion": 1,
-  "application": "Lumio Stream",
-  "creator": "yashas raj",
-  "version": "0.6.0",
+  "product": "Lumio Stream",
+  "version": "0.7.0",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDateUTC": "2026-10-26T18:37:50.015038+00:00",
-  "status": "verified-development-preview",
-  "developerIDSigned": false,
-  "notarized": false,
+  "buildDate": "2026-10-27T04:10:19.214Z",
+  "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
+  "sourceBranch": "mac",
+  "sourceCommit": "ef385428be1b80cda5f00060d78b7d740178f292",
   "artifact": {
-    "fileName": "Lumio-Stream-macOS-v0.6.0.dmg",
-    "bytes": 417930831,
-    "sha256": "7fc469aee93b0e5fc3c95818bee503e767c72d245dc0cf6800c9f228bb91adac"
+    "file": "Lumio-Stream-macOS-v0.7.0.dmg",
+    "size": 418161643,
+    "sha256": "437729abe32f2235d051931ce2e5c38855ba6fe01916eb8adeaf7be6b84cef63"
   },
-  "source": {
-    "repository": "https://github.com/yashasraj615/Lumio-Stream",
-    "branch": "mac",
-    "commit": "3c664925f873e45199523c2f233e00a8a50f1730"
-  },
-  "verification": {
-    "productionBuild": "passed",
-    "fastNodeTests": 15,
-    "tunnelSupervisor": "simulated process/origin/readiness/retry/stop check passed",
-    "actualLaunchAgent": "passed in source and final packaged app; same service PID survives complete Admin exit and reopen",
-    "nativeCommandQ": "passed; Administration exited and same server remained ready",
-    "stopStartAndAccessBoundary": "passed with real engine and viewer account",
-    "mobileLogin": "360x780, no horizontal overflow",
-    "mobileNavigation": "Home, Directory, Playlist, Favorites, Settings; portrait and landscape",
-    "expandedAudio": "actual synthetic MP3, no mini nodes or gap; minimized bar clears nav by 12px; desktop reaches bottom",
-    "pwaInstallUI": "synthetic lifecycle events and fallback guidance; no real installation claimed",
-    "nativeBrandingAndInstaller": "creator credit verified in packaged app; mounted DMG/Finder icon and Applications shortcut inspected",
-    "iconsAndBundle": "valid ICNS roundtrip, approved icon bytes and distinct server bundle ID inspected",
-    "portableFrameworks": "29 valid relative symlinks, local ICU resource, no development-only absolute links",
-    "dmg": "hdiutil verify VALID",
-    "packageConsistency": "key desktop/server/tunnel/build manifest match final source",
-    "disposableData": "test services, profiles, users, media, browser state and staged-helper crash reports removed"
+  "status": "Verified build preview; unsigned and non-notarized",
+  "checks": {
+    "build": "TypeScript, Vite and PWA pass",
+    "focusedTests": "2 focused Node tests pass",
+    "realEngine": "Four separate series with independent Season 1, local NFO/artwork, safe inspection and permission checks",
+    "audio": "Actual MP3; browser Back preserves route and playback; mobile gap 0 and paused record verified",
+    "package": "hdiutil verify VALID; packaged source, build manifest, icon and service helper checked",
+    "cleanup": "Disposable profile, media, accounts, LaunchAgent and browser app state removed"
   },
   "limitations": [
-    "Existing system Cloudflare connector preserved; explicit one-time migration required for Lumio-owned management",
-    "No physical display-off or lock test",
-    "No real public Cloudflare end-to-end or real PWA installation test",
-    "No completed Windows/Intel port or clean-machine Gatekeeper qualification",
-    "Unsigned/non-notarized preview; full FFmpeg corresponding-source archive remains a public-distribution gate"
+    "Cloudflare API responses simulated; no real credential/control-plane/public-hostname validation",
+    "Online metadata-provider match not asserted; local metadata/artwork fixture only",
+    "No physical display-off/lock, real PWA installation or clean-machine Gatekeeper qualification",
+    "New native panels build-checked/reviewed; no new native interaction walkthrough",
+    "Unsigned/non-notarized Apple silicon preview; Windows/Intel not qualified; corresponding-source distribution gates remain"
   ]
 }

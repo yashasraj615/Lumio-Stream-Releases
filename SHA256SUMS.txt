@@ -1,1 +1,1 @@
-7fc469aee93b0e5fc3c95818bee503e767c72d245dc0cf6800c9f228bb91adac  Lumio-Stream-macOS-v0.6.0.dmg
+437729abe32f2235d051931ce2e5c38855ba6fe01916eb8adeaf7be6b84cef63  Lumio-Stream-macOS-v0.7.0.dmg
