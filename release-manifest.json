@@ -1,32 +1,32 @@
 {
   "product": "Lumio Stream",
-  "version": "0.9.2",
+  "version": "0.10.0",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-28T12:36:10.638Z",
+  "buildDate": "2026-10-28T16:54:20.220Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "bc223ff460d661a386a39b98a131ad362fbd3683",
+  "sourceCommit": "b1006950b851032232d0396f6df32925691e9f10",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.9.2.dmg",
-    "size": 437177097,
-    "sha256": "865f17145be55cac5438590d06aa43bc6a60d9e82d437bc9520f33b04789f62a"
+    "file": "Lumio-Stream-macOS-v0.10.0.dmg",
+    "size": 437227728,
+    "sha256": "d08db3d596c8bce5388e9c5f64b0f32e067c3ccb8ceec52b2720f48591219977"
   },
   "status": "Unsigned, non-notarized development preview",
   "checks": {
-    "scope": "Stable video volume and mute, recommendation carousel arrows, mobile player and login refinements",
-    "audio": "Live playback: gain 0.35 remains stable after more than five seconds; mute stays at gain 0; unmute restores 0.35. 150% remains selected at gain 1.50 after waiting. Slider retains its selected level while muted.",
-    "carousel": "Live movie overview arrows move the existing rail one card (about 260px at the inspected desktop width) and return to the beginning, where Previous is disabled.",
-    "mobile": "390x844 player/settings and login, reduced-height 390x440 sign-in and 844x390 landscape playback inspected. The video element and playback position survive viewport changes. Existing sign-in returns to the requested movie route.",
-    "build": "Two focused audio-output tests plus TypeScript/Vite/PWA build and notices pass",
-    "package": "Final hdiutil verify VALID; installed 0.9.2 package matches the final frontend; service healthy; existing configuration preserved"
+    "scope": "Media metadata administration, validated artwork recovery, collection typing and artwork inheritance, authenticated synchronized Party Watch, optional music disc artwork",
+    "focusedTests": "Nine targeted checks pass; TypeScript/Vite/PWA build and notices pass. No exhaustive suite.",
+    "live": "Metadata save/reopen, provider-specific artwork apply, immediate-child cover, blocked local image URL, validation-only scan, collection integrity, two-player host pause/seek/play/end, audio playback and phone-width disc inspected.",
+    "package": "Apple silicon executable and required resources verified in mounted DMG. Installed application configuration retained."
   },
   "limitations": [
-    "Focused checks only; no exhaustive device or codec suite or acoustic loudness measurement",
-    "Fullscreen requests were rejected by the verification browser window; real-device fullscreen/orientation locking is not qualified",
-    "A reduced-height viewport was inspected; a physical iOS/Android on-screen keyboard was not available for verification",
-    "Unsigned, non-notarized Apple silicon preview; no Windows, Intel or clean-machine qualification",
-    "Browsers without Web Audio retain native 0-100% volume and cannot amplify"
+    "Unsigned, non-notarized macOS 14+ Apple silicon preview; no Windows, Intel or clean-machine qualification",
+    "Artwork coverage depends on configured providers; ambiguous images and optional Commons results require administrator review",
+    "Bulk poster recovery excludes episodes/music; individual artwork editing remains available",
+    "Party rooms expire after six hours and end when the server restarts; synchronization is approximate",
+    "Two real players used one existing account; independent user authorization/expiry tested with focused server fixtures",
+    "Network interruption recovery and physical-device fullscreen were not live-qualified",
+    "The sampled music track had no cover; fallback/rotation were inspected; speculative music artwork matching was not added"
   ]
 }
