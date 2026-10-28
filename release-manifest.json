@@ -1,27 +1,30 @@
 {
   "product": "Lumio Stream",
-  "version": "0.8.4",
+  "version": "0.9.0",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-27T16:14:13.862Z",
+  "buildDate": "2026-10-28T07:56:21.440Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "16a9ea7c2409a5c70253ee84bfbf678e0014fc41",
+  "sourceCommit": "6cb7f9e139eeef790a9ae4fb76e449e859e56394",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.8.4.dmg",
-    "size": 437148431,
-    "sha256": "65cbdc56fda5eedfaf6a4c536ef92fbe5d38f74c0d29a1e72ffa3445a7c58787"
+    "file": "Lumio-Stream-macOS-v0.9.0.dmg",
+    "size": 437170737,
+    "sha256": "b496ace37a25935d307ace5710c707f0b7a21792d0340c83e7e63974124aa973"
   },
   "status": "Unsigned, non-notarized development preview",
   "checks": {
-    "scope": "Restore 36px Music collection decoration; remove all original-media download actions and globally deny file-export routes",
-    "visual": "Actual installed Music collection and media-information views inspected; 36px disc fits and no Download original action exists",
-    "build": "Four focused media-plane tests, TypeScript/Vite/PWA build and release notices pass",
-    "downloadPolicy": "Actual local media and native-control download/original-file requests return 403",
-    "package": "hdiutil verify VALID; installed app version and packaged UI verified"
+    "scope": "Video inactivity chrome, optional 150% video gain, persistent folder declarations and shared episode sorting",
+    "visual": "Actual video keeps playing with chrome hidden; pointer restores controls; pause keeps controls visible. 100% default, 150% boost and mute verified; phone-width settings inspected.",
+    "hierarchy": "Real configured folder declared, reopened, projected into Media Center series/seasons with real episodes; temporary declarations reset afterward.",
+    "ordering": "Representative numerical/alphabetical ordering regression and real season sorting control checked.",
+    "build": "Six focused tests plus TypeScript/Vite/PWA build and notices pass",
+    "package": "hdiutil verify VALID; installed app version and packaged code/build match"
   },
   "limitations": [
-    "No broad playback or device test suite; no Windows/Intel or clean-machine signing/notarization qualification"
+    "Focused checks only; no exhaustive device, codec or catalog test suite",
+    "No Windows/Intel or clean-machine signing/notarization qualification",
+    "Gain compression cannot recover already-clipped audio; unsupported Web Audio browsers retain normal volume"
   ]
 }
