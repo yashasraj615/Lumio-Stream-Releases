@@ -1,22 +1,22 @@
 {
   "product": "Lumio Stream",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-28T16:54:20.220Z",
+  "buildDate": "2026-10-28T17:31:01.069Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "b1006950b851032232d0396f6df32925691e9f10",
+  "sourceCommit": "4744c94395d7981834745e5c2b1c8c047282c70c",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.10.0.dmg",
-    "size": 437227728,
-    "sha256": "d08db3d596c8bce5388e9c5f64b0f32e067c3ccb8ceec52b2720f48591219977"
+    "file": "Lumio-Stream-macOS-v0.10.1.dmg",
+    "size": 437227607,
+    "sha256": "e69d01e46e026c944979f8489206abdbe6a8fac1ea5bb3a7d48b290eba4359ef"
   },
   "status": "Unsigned, non-notarized development preview",
   "checks": {
     "scope": "Media metadata administration, validated artwork recovery, collection typing and artwork inheritance, authenticated synchronized Party Watch, optional music disc artwork",
-    "focusedTests": "Nine targeted checks pass; TypeScript/Vite/PWA build and notices pass. No exhaustive suite.",
+    "focusedTests": "Ten targeted checks pass; TypeScript/Vite/PWA build and notices pass. No exhaustive suite.",
     "live": "Metadata save/reopen, provider-specific artwork apply, immediate-child cover, blocked local image URL, validation-only scan, collection integrity, two-player host pause/seek/play/end, audio playback and phone-width disc inspected.",
     "package": "Apple silicon executable and required resources verified in mounted DMG. Installed application configuration retained."
   },
