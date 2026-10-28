@@ -1,10 +1,11 @@
-# Lumio Stream 0.9.1
+# Lumio Stream 0.9.2
 
 macOS 14+ / Apple silicon · unsigned, non-notarized preview
 
-- Fix Administration returning to Overview on macOS activation. Bringing the running window forward preserves its current route and form state. Last section, folder selection, expanded tree and unfinished declaration edits also restore per administrator.
-- Simplify Folder Declarations to Main, Collection and Series. Seasons are inferred inside each series. Legacy season declarations migrate atomically to compatibility metadata, preserving their IDs, folder identities and custom season numbers without changing media files or rebuilding the library.
-- Collection Containers infer immediate child series automatically, respect explicit overrides and keep series IDs stable when inferred children are explicitly declared. TV browsing and dedicated responsive collection pages show distinct series, their artwork and readable titles; authorized empty collections explain how to populate them.
-- Move the compact Episode Order / Alphabetical selector to the right of the season header. Season/tab context restores when returning to a series. Existing episode ordering preferences are retained.
+- Unify video attenuation, boost and mute in one persistent Web Audio output stage. The native element stays at unity while the gain node applies the selected 0–150% level; mute gates the same output to zero. Reapply intent on native volume/source events without reading transient values into preferences or polling. A native-only fallback supports 0–100% when Web Audio is unavailable.
+- Keep the selected video slider level while muted. Slider changes remain silent until Unmute, which restores the selected level; a zero slider can restore the last nonzero level. Session-only video preferences remain separate from music. Existing music volume behavior is retained.
+- Add accessible previous/next recommendation arrows to the existing “More from your collection” rail. Each click scrolls one card, with smooth motion, edge disabling, resize tracking and reduced-motion support. Touch and trackpad scrolling remain available.
+- Refine mobile video touch targets, timeline spacing, safe areas and settings. Prefer landscape only during supported touch-device fullscreen; gracefully retain playback if orientation locking is unavailable. No video element recreation on rotation.
+- Refine mobile sign-in with compact short-screen spacing, proper username input hints, a larger visibility toggle, visual-viewport keyboard clearance and duplicate-submit protection. Existing authentication and route restoration are unchanged. Desktop login styling is retained.
 
-Focused verification is recorded in the distribution manifest. Video controls, audio boost, music, authentication and Cloudflare/DNS/hosting configuration are unchanged. Public assets are limited to the macOS DMG, checksum and manifest.
+Focused verification and platform limitations are recorded in the distribution manifest. No backend/database, scanner, collection hierarchy, Admin persistence, Cloudflare, DNS or hosting configuration changes. Public assets are limited to the macOS DMG, checksum and manifest.

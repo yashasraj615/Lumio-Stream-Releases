@@ -1,30 +1,32 @@
 {
   "product": "Lumio Stream",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-28T08:53:13.728Z",
+  "buildDate": "2026-10-28T12:36:10.638Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "ced13a2959d18486bb3b66a66fa47b5f5825a78a",
+  "sourceCommit": "bc223ff460d661a386a39b98a131ad362fbd3683",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.9.1.dmg",
-    "size": 437142594,
-    "sha256": "e063a2ba22007f1fac813e2327cad0fecaba191cf9aec8a7219ea86b9cb5675b"
+    "file": "Lumio-Stream-macOS-v0.9.2.dmg",
+    "size": 437177097,
+    "sha256": "865f17145be55cac5438590d06aa43bc6a60d9e82d437bc9520f33b04789f62a"
   },
   "status": "Unsigned, non-notarized development preview",
   "checks": {
-    "scope": "Administration context persistence, simplified folder declarations, collection hierarchy and episode sort placement",
-    "visual": "Live native Administration retains section, folder, expanded tree and unsaved edit after app switching and section navigation. Temporary edit discarded. Live collection, child series seasons and phone-width collection layout inspected.",
-    "hierarchy": "Two focused tests verify immediate-child series inference, explicit override identity stability, numerical seasons, original episode IDs, validation and atomic legacy season migration. Existing user declarations preserved.",
-    "ordering": "One focused episode-order test covers numerical/alphabetical, multipart, specials and unresolved ordering. Live selector modes and right alignment checked; selected season restores after returning from collection.",
-    "build": "TypeScript/Vite/PWA build and third-party notices pass",
-    "package": "hdiutil verify VALID; installed 0.9.1 package and build match; local server healthy"
+    "scope": "Stable video volume and mute, recommendation carousel arrows, mobile player and login refinements",
+    "audio": "Live playback: gain 0.35 remains stable after more than five seconds; mute stays at gain 0; unmute restores 0.35. 150% remains selected at gain 1.50 after waiting. Slider retains its selected level while muted.",
+    "carousel": "Live movie overview arrows move the existing rail one card (about 260px at the inspected desktop width) and return to the beginning, where Previous is disabled.",
+    "mobile": "390x844 player/settings and login, reduced-height 390x440 sign-in and 844x390 landscape playback inspected. The video element and playback position survive viewport changes. Existing sign-in returns to the requested movie route.",
+    "build": "Two focused audio-output tests plus TypeScript/Vite/PWA build and notices pass",
+    "package": "Final hdiutil verify VALID; installed 0.9.2 package matches the final frontend; service healthy; existing configuration preserved"
   },
   "limitations": [
-    "Focused checks only; no exhaustive device or catalog test suite",
+    "Focused checks only; no exhaustive device or codec suite or acoustic loudness measurement",
+    "Fullscreen requests were rejected by the verification browser window; real-device fullscreen/orientation locking is not qualified",
+    "A reduced-height viewport was inspected; a physical iOS/Android on-screen keyboard was not available for verification",
     "Unsigned, non-notarized Apple silicon preview; no Windows, Intel or clean-machine qualification",
-    "Collection cards reuse available catalog artwork and existing fallbacks; no artwork is fabricated"
+    "Browsers without Web Audio retain native 0-100% volume and cannot amplify"
   ]
 }
