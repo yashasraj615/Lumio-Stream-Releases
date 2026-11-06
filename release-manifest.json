@@ -1,32 +1,34 @@
 {
   "product": "Lumio Stream",
-  "version": "0.10.1",
+  "version": "0.11.0",
   "platform": "macOS",
   "architecture": "arm64",
   "minimumOS": "14.0",
-  "buildDate": "2026-10-28T17:31:01.069Z",
+  "buildDate": "2026-11-06T03:32:40.119Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "mac",
-  "sourceCommit": "4744c94395d7981834745e5c2b1c8c047282c70c",
+  "sourceCommit": "8fce8bd474f285b47d407f200b7ff7530b28f664",
   "artifact": {
-    "file": "Lumio-Stream-macOS-v0.10.1.dmg",
-    "size": 437227607,
-    "sha256": "e69d01e46e026c944979f8489206abdbe6a8fac1ea5bb3a7d48b290eba4359ef"
+    "file": "Lumio-Stream-macOS-v0.11.0.dmg",
+    "size": 437240165,
+    "sha256": "2036482240aef5d0ec32ab28073f203c33d6addb9c952974822bf2edf6a1636d"
   },
   "status": "Unsigned, non-notarized development preview",
   "checks": {
-    "scope": "Media metadata administration, validated artwork recovery, collection typing and artwork inheritance, authenticated synchronized Party Watch, optional music disc artwork",
-    "focusedTests": "Ten targeted checks pass; TypeScript/Vite/PWA build and notices pass. No exhaustive suite.",
-    "live": "Metadata save/reopen, provider-specific artwork apply, immediate-child cover, blocked local image URL, validation-only scan, collection integrity, two-player host pause/seek/play/end, audio playback and phone-width disc inspected.",
-    "package": "Apple silicon executable and required resources verified in mounted DMG. Installed application configuration retained."
+    "focusedTests": "12 targeted checks pass; production build passes.",
+    "encoder": "Real older HEVC source produced complete HLS segments with VideoToolbox and libx264; cached scene thumbnail decoded.",
+    "installation": "Mounted DMG, matching packaged backend/frontend bytes, installed arm64 bundle and ready 0.11.0 service verified.",
+    "live": "Installed app: older HEVC transcoding and compatible H.264 Direct Play; exact paused position/rate/track preservation, playing and rapid quality changes; decoded desktop and touch timeline previews; PiP/Home retained one page; partial/completed history; two login identities and exact Chrome revocation confirmed.",
+    "responsive": "Phone 390×844 and tablet 820×1180 viewport/touch emulation inspected, selection remained empty, no horizontal overflow; overrides restored."
   },
   "limitations": [
-    "Unsigned, non-notarized macOS 14+ Apple silicon preview; no Windows, Intel or clean-machine qualification",
-    "Artwork coverage depends on configured providers; ambiguous images and optional Commons results require administrator review",
-    "Bulk poster recovery excludes episodes/music; individual artwork editing remains available",
-    "Party rooms expire after six hours and end when the server restarts; synchronization is approximate",
-    "Two real players used one existing account; independent user authorization/expiry tested with focused server fixtures",
-    "Network interruption recovery and physical-device fullscreen were not live-qualified",
-    "The sampled music track had no cover; fallback/rotation were inspected; speculative music artwork matching was not added"
+    "Unsigned Apple silicon macOS 14+ preview; no Intel, Windows or clean-machine qualification.",
+    "Physical Android phone/tablet behavior requires device validation.",
+    "Native HLS may contain one rendition; no CPU-heavy pre-encoded ladder is manufactured.",
+    "Hardware failure recovery through configuration requires an authenticated administrator connection.",
+    "Existing history imports the latest reliable engine viewing timestamp per title; older unrecorded rewatches cannot be reconstructed.",
+    "Phone/tablet checks used Chrome emulation, not physical Android devices.",
+    "Forced hardware-encoder failure and actual network-loss recovery were not live-injected; software encoding and transaction rollback were checked separately.",
+    "Logout/expiry/offline and cross-user history protection use focused server fixtures; live revocation used two logins of one existing account."
   ]
 }

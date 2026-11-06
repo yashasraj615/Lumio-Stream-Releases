@@ -1,17 +1,15 @@
 # Lumio Stream Releases
 
-Public installer distribution repository for Lumio Stream. Application source stays in the private original Lumio-Stream repository.
+Public installer distribution for Lumio Stream. Application code remains exclusively in the original private Lumio-Stream repository.
 
 ## Latest verified preview
 
-[0.10.1 for macOS Apple silicon](https://github.com/yashasraj615/Lumio-Stream-Releases/releases/tag/v0.10.1) — macOS 14 or later. This is an unsigned, non-notarized development preview, not a production-qualified release. Before replacing an app, explicitly quit its server/tray and Administration; your data is retained. Lumio has an independent background service: quitting Administration leaves streaming running. First launch offers per-user service setup. Version 0.10.1 adds Media Metadata administration, validated artwork recovery, collection corrections and authenticated Party Watch. Version 0.8 introduced managed Cloudflare setup and end-to-end connection checks. See the release notes for qualification limits.
+[0.11.0 for macOS Apple silicon](https://github.com/yashasraj615/Lumio-Stream-Releases/releases/tag/v0.11.0) — macOS 14 or later. Unsigned, non-notarized development preview. This update improves quality transitions, transcoding, timeline previews, background synchronization, session status and private 30-day Watch History.
 
-Installers are GitHub Release assets, never ordinary Git commits. Names use the configured application version: `Lumio-Stream-macOS-vX.Y.Z.dmg`. Every verified preview includes `release-manifest.json` (actual version, platform, build date, source commit, checks and limitations), `SHA256SUMS.txt` and concise release notes. Verify the hash before installation. GitHub marks development previews as prereleases; the link above identifies the latest verified preview. An unverified development build must not replace it.
+Installers are Release assets, never Git commits. Verify the accompanying SHA-256 before installation. Quit the background server and Administration before replacing the installed app; preserve Application Support data. The background service remains available when Administration is closed.
 
-Windows `.exe` installers are planned. No completed or verified Windows release is available. Future names will use `Lumio-Stream-Windows-vX.Y.Z.exe` after actual Windows qualification.
+Windows installers are planned; no Windows build is qualified. See [release notes](RELEASE_NOTES.md), [verification](VERIFICATION_REPORT.md) and [distribution policy](DISTRIBUTION_POLICY.md).
+
+Only approved installers, checksums and release metadata are published here. No application-source or runtime-source archives are attached. GitHub's automatic Source code ZIP/tar links remain available and contain only this distribution repository's documents/metadata.
 
 yashas raj
-
-## Distribution boundaries
-
-Only approved installers, installer checksums and necessary release metadata are distributed here. See [distribution policy](DISTRIBUTION_POLICY.md) and [cleanup record](PUBLIC_RELEASE_REVIEW.md). No application-source or runtime-source downloads are provided. GitHub’s automatically generated Source code ZIP/tar links snapshot this distribution repository’s documents/metadata; they do not expose the private application repository.

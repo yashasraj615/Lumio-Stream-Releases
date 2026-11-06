@@ -1,12 +1,11 @@
-# Lumio Stream 0.10.1
+# Lumio Stream 0.11.0
 
-- Dedicated Media Metadata administration: catalog search, identity/story/credits/TV ordering, staged provider rematching, explicit save/cancel, stale-edit detection and saved-history restore.
-- Missing-artwork scanning and recovery with validated local image caching, reviewable candidates, upload/HTTPS image choices, protected manual selections and progress/retry controls.
-- Deterministic immediate-child collection covers and parent-series season fallbacks; existing folder declarations and media files remain intact.
-- Collections now query video collections explicitly and reject audio memberships. A targeted repair action removes existing invalid audio relationships without deleting collections or music.
-- Authenticated Party Watch in the existing video player: expiring invitations, host play/pause/seek/rate, participant status, reconnect and clock/drift compensation. Invitations grant no media access; restarting Lumio ends parties.
-- Existing music covers can appear inside the shared branded spinning disc, with the original fallback and playback-driven rotation.
+- In-place quality/audio-track transitions preserve playback position, paused state, speed and subtitle choices; cancellation and rollback protect the previous stream.
+- Qualified Apple VideoToolbox, efficient software fallback, three-second HLS segments, bounded buffering and sensible legacy-source bitrate/resolution budgets.
+- Timeline scene previews on desktop hover and touch scrubbing, reusing native sprite sheets or a bounded asynchronous frame cache.
+- Scoped Android selection/tap-highlight suppression on the video surface.
+- Silent progress-row refreshes and PiP synchronization without tearing down the application shell.
+- Authoritative login/session status with exact-login revocation, expiry, device labels and offline distinction.
+- Private profile Watch History for the last 30 days, including completed titles, partial watches and separate rewatches; expiry preserves resume bookmarks.
 
-Apple silicon macOS 14+ preview; unsigned and non-notarized. Artwork availability depends on configured metadata providers. Ambiguous results require administrator review; no artwork or metadata guesses are silently applied. No Cloudflare, DNS or hosting settings changed.
-
-0.10.1 also applies saved artwork consistently to global search, person credits and TV browsing responses.
+Apple silicon macOS 14+ preview; unsigned and non-notarized. No media files, authentication architecture, Cloudflare, DNS or hosting configuration changed. See PLAYBACK_RELIABILITY.md for behavior and qualification limits.
