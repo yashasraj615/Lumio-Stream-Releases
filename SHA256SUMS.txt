@@ -1,1 +1,2 @@
 2036482240aef5d0ec32ab28073f203c33d6addb9c952974822bf2edf6a1636d  Lumio-Stream-macOS-v0.11.0.dmg
+4a71c3bd7bb3f115a4b6f751eefe0d3a479f56fa964cf94b3fe67c106b0d65e9  Lumio-Stream-Windows-v0.11.0.exe
