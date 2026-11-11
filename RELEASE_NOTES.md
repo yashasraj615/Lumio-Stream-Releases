@@ -1,3 +1,29 @@
+# Lumio Stream 0.11.2 · Linux server edition
+
+Lumio Stream now runs on Linux desktops and headless servers, with the same media server, Media Center, Administration and features as the Mac and Windows editions. Mac and Windows stay at 0.11.0; the Android and Android TV clients stay at 0.11.1 and connect to a Linux server the same way.
+
+## Three ways to install (x86_64)
+
+- **AppImage** (`Lumio-Stream-Linux-v0.11.2-x86_64.AppImage`) for most distributions: make it executable and run it.
+- **Debian / Ubuntu** (`Lumio-Stream-Linux-v0.11.2-amd64.deb`): `sudo apt install ./Lumio-Stream-Linux-v0.11.2-amd64.deb`
+- **Fedora / RHEL** (`Lumio-Stream-Linux-v0.11.2-x86_64.rpm`): `sudo dnf install ./Lumio-Stream-Linux-v0.11.2-x86_64.rpm`
+
+## What's in the Linux edition
+
+- The background server runs as a per-user systemd service: it starts when you sign in, restarts after a crash and keeps running when Administration closes. No root daemon and no administrator password for the service itself.
+- **Start at boot for servers**: `lumio-stream server at-boot on` (systemd linger), or the same switch in Administration → Application.
+- A panel tray with server status, Open Media Center, Administration, scan, start/restart/stop, logs and quit, on desktops with a system tray.
+- **Headless servers**: `lumio-stream server setup | status | start | stop | restart | logs | backup | restore | quit | remove`, plus `lumio-stream server admin`, which opens Administration in any browser through a one-time local link (works over an SSH tunnel).
+- Hardware video encoding detection for VA-API (Intel and AMD), Intel Quick Sync and NVIDIA NVENC, with software fallback.
+- Library data lives in `~/.local/share/lumio-stream`; upgrades keep it, and removing the package keeps your library and original media.
+- Remote access through Cloudflare works the same as on Mac and Windows, including a system `cloudflared` service.
+
+Guide: https://lumio-stream.pages.dev/docs/linux/
+
+Limitations: tested on Ubuntu 24.04 (desktop session), Debian 12 and Fedora 41 (headless); physical GPUs were not qualified; x86_64 only; packages are unsigned, so verify the SHA-256 before installing.
+
+---
+
 # Lumio Stream 0.11.1 · Android and Android TV clients
 
 Two new apps that **connect to** your Lumio Stream server. They do not host, scan or store a media library; your Mac or Windows server stays the home of your collection. Desktop servers remain at 0.11.0.

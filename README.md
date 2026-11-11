@@ -12,9 +12,13 @@ Installers are Release assets, never Git commits. Verify the accompanying SHA-25
 
 Run the Windows setup wizard, enable the background host, create your administrator and add your existing Windows media folders. Closing Administration leaves the server running. The uninstaller removes the application and startup registration while retaining library data and original media. No Mac accounts, media or tunnel credentials are bundled. See [release notes](RELEASE_NOTES.md), [verification](VERIFICATION_REPORT.md) and [distribution policy](DISTRIBUTION_POLICY.md).
 
+## Linux server edition
+
+[0.11.2 for Linux x86_64](https://github.com/yashasraj615/Lumio-Stream-Releases/releases/tag/v0.11.2) — AppImage, Debian/Ubuntu `.deb` and Fedora/RHEL `.rpm`. The same Lumio server, Media Center and Administration as on Mac and Windows, running as a per-user systemd service, with a panel tray on desktops and `lumio-stream server …` commands (including browser Administration over SSH) on headless servers. Verify the SHA-256 in that release's `SHA256SUMS.txt` before installing. See the [Linux guide](https://lumio-stream.pages.dev/docs/linux/).
+
 ## Android and Android TV clients
 
-[0.11.1 for Android phones and tablets and for Android TV](https://github.com/yashasraj615/Lumio-Stream-Releases/releases/tag/v0.11.1) — Android 8.0 or later. These apps **connect to** a Lumio Stream server running on your Mac or Windows PC; they do not host media. Install `Lumio-Stream-Android-v0.11.1.apk` on a phone or tablet, or `Lumio-Stream-AndroidTV-v0.11.1.apk` on a TV, enter your server's HTTPS address (Remote access) and sign in. Both stay signed in, play music in the background and update themselves from this page after verifying the checksum and signature. Verify the SHA-256 in that release's `SHA256SUMS.txt` before installing.
+[0.11.1 for Android phones and tablets and for Android TV](https://github.com/yashasraj615/Lumio-Stream-Releases/releases/tag/v0.11.1) — Android 8.0 or later. These apps **connect to** a Lumio Stream server running on your Mac, Windows PC or Linux computer; they do not host media. Install `Lumio-Stream-Android-v0.11.1.apk` on a phone or tablet, or `Lumio-Stream-AndroidTV-v0.11.1.apk` on a TV, enter your server's HTTPS address (Remote access) and sign in. Both stay signed in, play music in the background and update themselves from this page after verifying the checksum and signature. Verify the SHA-256 in that release's `SHA256SUMS.txt` before installing.
 
 Only approved installers, checksums and release metadata are published here. No application-source or runtime-source archives are attached. GitHub's automatic Source code ZIP/tar links remain available and contain only this distribution repository's documents/metadata.
 

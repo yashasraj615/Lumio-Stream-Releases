@@ -1,3 +1,27 @@
+# Lumio Stream 0.11.2 Linux verification
+
+Built from private branch `linux`, commit `2eb75ab8e152b41bd619e809b786b0e83c957e41`, by the private GitHub Actions "Linux baseline" run `43067248394` on Ubuntu 24.04 x86_64. The published files are byte-identical to the packages that run built and verified (SHA-256 checked after transfer). Disposable test accounts and generated media only; no personal library or account was used.
+
+Installed-package checks (real systemd user session, Xvfb display, Google Chrome), all 17 passed:
+
+- The Debian package installs the branded app, launcher, desktop entry and pinned Linux runtime; the rpm and AppImage are well-formed.
+- `lumio-stream server setup` installs the systemd user service; the gateway and Jellyfin become healthy.
+- Native Administration signs in and renders under X11; closing it leaves the server running and starts the panel tray as its own user unit.
+- The real scanner indexes Unicode and space-containing Linux paths without changing original files.
+- Supported video uses actual Direct Play in Chrome; legacy video actually transcodes to HLS, and quality changes keep the paused position.
+- Timeline scene previews are extracted by the Linux FFmpeg; profile Watch History follows actual playback; music plays with the branded disc.
+- Headless Administration works in a browser through the one-time loopback bridge with Linux preferences.
+- Clean engine stop/start and tar backup and restore from the terminal.
+- A crashed server is restarted by systemd with no orphaned engine.
+- Quitting and reopening the background server keeps the sign-in start choice.
+- The AppImage runs the same terminal commands against the installed server profile.
+- An in-place package upgrade keeps configuration, database and the service registration; removing the package keeps library data and original media and leaves no failing service loop.
+- Test data was removed from the runner; the packages contain no seeded account.
+
+Headless containers without systemd or a display: on Fedora 41 (rpm) and Debian 12 (deb), an unprivileged user ran `server version`, `setup`, `status` (ready), `stop` and `quit`.
+
+Limitations: hosted runners only; physical GPUs (VA-API, NVENC, Quick Sync) and physical desktop panels were not qualified; no public Cloudflare tunnel was configured; other distributions were not tested.
+
 # Lumio Stream 0.11.1 Android clients verification
 
 Built from private branch `android`, commit `0ab29af8a5a3ce425f97b1c049f7ca559cf33713`, as minified release APKs signed with the Lumio Stream release key (certificate SHA-256 `1a3ab34249666fb47e15aa4b699eaa30a480703dd8de771e4abe9392a57c1465`). Tested against disposable Lumio 0.11.0 servers with generated media; no personal library or account was used.
