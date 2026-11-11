@@ -1,87 +1,52 @@
 {
   "product": "Lumio Stream",
-  "version": "0.11.0",
-  "platform": "macOS",
-  "architecture": "arm64",
-  "minimumOS": "14.0",
-  "buildDate": "2026-11-06T03:32:40.119Z",
+  "version": "0.11.1",
+  "buildDate": "2026-11-11T10:45:24.639Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
-  "sourceBranch": "mac",
-  "sourceCommit": "8fce8bd474f285b47d407f200b7ff7530b28f664",
-  "artifact": {
-    "file": "Lumio-Stream-macOS-v0.11.0.dmg",
-    "size": 437240165,
-    "sha256": "2036482240aef5d0ec32ab28073f203c33d6addb9c952974822bf2edf6a1636d"
-  },
-  "status": "Unsigned cross-platform baseline; macOS is non-notarized",
+  "sourceBranch": "android",
+  "sourceCommit": "0ab29af8a5a3ce425f97b1c049f7ca559cf33713",
+  "status": "Android connection clients preview. Desktop servers remain at 0.11.0 for macOS and Windows.",
   "checks": {
-    "focusedTests": "12 targeted checks pass; production build passes.",
-    "encoder": "Real older HEVC source produced complete HLS segments with VideoToolbox and libx264; cached scene thumbnail decoded.",
-    "installation": "Mounted DMG, matching packaged backend/frontend bytes, installed arm64 bundle and ready 0.11.0 service verified.",
-    "live": "Installed app: older HEVC transcoding and compatible H.264 Direct Play; exact paused position/rate/track preservation, playing and rapid quality changes; decoded desktop and touch timeline previews; PiP/Home retained one page; partial/completed history; two login identities and exact Chrome revocation confirmed.",
-    "responsive": "Phone 390\u00d7844 and tablet 820\u00d71180 viewport/touch emulation inspected, selection remained empty, no horizontal overflow; overrides restored.",
-    "windows": {
-      "focusedChecks": 12,
-      "installedApplicationChecks": [
-        "NSIS installer installs the branded x64 app, host and runtime without elevation",
-        "Windows per-user background host and Jellyfin become healthy",
-        "Native administration signs in, renders the shared dark UI, and closing it leaves playback server running",
-        "Real scanner indexes Windows Unicode/space paths with original files unchanged",
-        "Supported video uses actual Direct Play in Windows Edge",
-        "Legacy video actually transcodes to HLS; quality changes preserve paused position",
-        "Timeline cache extracts and displays a real Windows FFmpeg scene preview",
-        "Profile Watch History is connected to actual Windows playback reports",
-        "Music playback and the original branded disc render on Windows",
-        "Clean stop/start and Windows tar backup/restore preflight work",
-        "Unexpected worker termination is reaped and restarted by the Windows host",
-        "Tray-host stop and reopening restart the same preserved library profile",
-        "In-place NSIS upgrade preserves configuration, database and sign-in startup choice",
-        "Uninstaller removes app and startup registration while preserving user data and original media",
-        "Disposable Windows test user/profile/media removed from runner; installer contains no seeded account"
-      ],
-      "passed": true,
-      "ui": "Native Administration, video controls/preview and branded-disc music screenshots visually inspected."
-    }
+    "phone": "Android 14 emulator, debug and minified release: connect and server sign-in, sign-in kept across server restarts and an in-place update, locked-screen album playback with the foreground service held across track changes, media session metadata with branded disc artwork, favourite/shuffle/repeat controls, Back through dialogs and players, picture-in-picture from Back, Home and full screen.",
+    "tv": "TV-resolution (1920x1080, 320 dpi) emulator driven with D-pad and media keys, debug and minified release: connect and native sign-in, home feed with focus-driven hero, side navigation, film/series/album pages, search, settings, direct-play video with remote controls and progress reported to the server, background music with track advance.",
+    "updater": "Release discovery, SHA-256 and signer verification exercised against a local releases feed."
   },
   "limitations": [
-    "Unsigned Apple silicon macOS 14+ artifact; no Intel Mac qualification.",
-    "Physical Android phone/tablet behavior requires device validation.",
-    "Native HLS may contain one rendition; no CPU-heavy pre-encoded ladder is manufactured.",
-    "Hardware failure recovery through configuration requires an authenticated administrator connection.",
-    "Existing history imports the latest reliable engine viewing timestamp per title; older unrecorded rewatches cannot be reconstructed.",
-    "Phone/tablet checks used Chrome emulation, not physical Android devices.",
-    "Forced hardware-encoder failure and actual network-loss recovery were not live-injected; software encoding and transaction rollback were checked separately.",
-    "Logout/expiry/offline and cross-user history protection use focused server fixtures; live revocation used two logins of one existing account.",
-    "Hosted Windows Server runner; physical consumer GPU, HDR/DRM and signed-installer SmartScreen reputation are not qualified.",
-    "No public Cloudflare tunnel was configured by CI."
+    "The TV client was tested on a phone emulator image at TV resolution, not a physical Android TV or Google TV device.",
+    "The final install step of a self-update requires the one-time Install unknown apps permission on the device and was not completed in testing.",
+    "Physical Bluetooth devices and multi-hour Doze on a real phone were not tested.",
+    "Media downloads for offline use are not offered because Lumio servers disable media downloads."
   ],
   "artifacts": [
     {
-      "file": "Lumio-Stream-macOS-v0.11.0.dmg",
-      "size": 437240165,
-      "sha256": "2036482240aef5d0ec32ab28073f203c33d6addb9c952974822bf2edf6a1636d",
-      "platform": "macOS",
-      "architecture": "arm64",
-      "minimumOS": "14.0",
-      "sourceBranch": "mac",
-      "sourceCommit": "8fce8bd474f285b47d407f200b7ff7530b28f664"
+      "file": "Lumio-Stream-Android-v0.11.1.apk",
+      "size": 2474004,
+      "sha256": "415ffd074242eca7c375baa49f422c27642a6ccd3cf09cc7d5888512c0748bf0",
+      "platform": "Android",
+      "formFactor": "Phone and tablet",
+      "package": "app.lumio.stream.android",
+      "minimumOS": "Android 8.0 (API 26)",
+      "role": "Connection client: connects to an existing Lumio Stream server; hosts no media",
+      "signing": "Signed APK (Lumio Stream release key, certificate SHA-256 1a3ab34249666fb47e15aa4b699eaa30a480703dd8de771e4abe9392a57c1465)",
+      "sourceBranch": "android",
+      "sourceCommit": "0ab29af8a5a3ce425f97b1c049f7ca559cf33713"
     },
     {
-      "file": "Lumio-Stream-Windows-v0.11.0.exe",
-      "size": 437358739,
-      "sha256": "4a71c3bd7bb3f115a4b6f751eefe0d3a479f56fa964cf94b3fe67c106b0d65e9",
-      "platform": "Windows",
-      "architecture": "x64",
-      "signing": "unsigned",
-      "sourceBranch": "windows",
-      "sourceCommit": "1f9f8b51d6d9d1aedb6deb0a4ee3693a6a20ec73",
-      "qualifiedOn": "Windows Server 2025 x64 (hosted runner)",
-      "buildRun": "https://github.com/yashasraj615/Lumio-Stream/actions/runs/42443911339",
-      "verifiedAt": "2026-11-08T04:03:18.118292+00:00"
+      "file": "Lumio-Stream-AndroidTV-v0.11.1.apk",
+      "size": 3007398,
+      "sha256": "892c623424bf68cc1e47ffdf19d7343eb0e9b8e0ba134e087abd01e58302b120",
+      "platform": "Android TV",
+      "formFactor": "Television (remote)",
+      "package": "app.lumio.stream.tv",
+      "minimumOS": "Android 8.0 (API 26)",
+      "role": "Connection client: connects to an existing Lumio Stream server; hosts no media",
+      "signing": "Signed APK (Lumio Stream release key, certificate SHA-256 1a3ab34249666fb47e15aa4b699eaa30a480703dd8de771e4abe9392a57c1465)",
+      "sourceBranch": "android",
+      "sourceCommit": "0ab29af8a5a3ce425f97b1c049f7ca559cf33713"
     }
   ],
   "platforms": [
-    "macOS",
-    "Windows"
+    "Android",
+    "Android TV"
   ]
 }

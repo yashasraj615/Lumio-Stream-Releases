@@ -1,2 +1,2 @@
-2036482240aef5d0ec32ab28073f203c33d6addb9c952974822bf2edf6a1636d  Lumio-Stream-macOS-v0.11.0.dmg
-4a71c3bd7bb3f115a4b6f751eefe0d3a479f56fa964cf94b3fe67c106b0d65e9  Lumio-Stream-Windows-v0.11.0.exe
+415ffd074242eca7c375baa49f422c27642a6ccd3cf09cc7d5888512c0748bf0  Lumio-Stream-Android-v0.11.1.apk
+892c623424bf68cc1e47ffdf19d7343eb0e9b8e0ba134e087abd01e58302b120  Lumio-Stream-AndroidTV-v0.11.1.apk

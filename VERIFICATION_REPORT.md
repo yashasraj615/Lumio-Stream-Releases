@@ -1,3 +1,13 @@
+# Lumio Stream 0.11.1 Android clients verification
+
+Built from private branch `android`, commit `0ab29af8a5a3ce425f97b1c049f7ca559cf33713`, as minified release APKs signed with the Lumio Stream release key (certificate SHA-256 `1a3ab34249666fb47e15aa4b699eaa30a480703dd8de771e4abe9392a57c1465`). Tested against disposable Lumio 0.11.0 servers with generated media; no personal library or account was used.
+
+- Phone (Android 14 emulator): connect and server sign-in; sign-in kept across server restarts and across an in-place update from an earlier build; album playback with the screen locked advanced track to track while the foreground service stayed active; the system media session carried title, artist, album and the branded disc artwork; favourite was written to the server and shuffle mirrored the page; Back closed dialogs, collapsed players and returned through pages; picture-in-picture from Back, Home and full screen showed only the video, its controls worked and closing it stopped playback.
+- TV (Android 14 emulator at 1920×1080, 320 dpi, driven only with D-pad and media keys): connect and native sign-in; home feed with focus-driven hero and backdrop; side navigation; film, series and album pages; search; settings; direct-play video with remote seek and pause and progress reported to the server; music with background playback and track advance after leaving the app.
+- Updater: release discovery, SHA-256 and signer verification were exercised against a local releases feed. The final Android install confirmation was not completed.
+
+Limitations: no physical Android TV, Google TV, phone, Bluetooth or long-Doze testing; the TV app was exercised on a phone system image at TV resolution.
+
 # Lumio Stream 0.11.0 verification
 
 - Apple silicon macOS application installed and running, version 0.11.0. Existing five libraries, twelve folder declarations and host settings preserved.
