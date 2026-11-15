@@ -1,3 +1,16 @@
+# Lumio Stream 0.11.3 Windows verification
+
+Built on a physical Windows 11 Pro x64 PC from private branch `windows`, commit `87991c1`. The published EXE is the file checked below.
+
+- Windows baseline unit tests: 17 pass (connection parsing, address normalization, DNS fallback, two-step state, route detection, verified connector download, system-service handling, Windows packaging and filesystem boundaries). Typecheck and production build pass.
+- Live tunnel on the same PC: the pasted Windows command was parsed and the bundled connector registered with Cloudflare in about 1 second, with the matching tunnel ID. The route Cloudflare pushed (`hostname → http://127.0.0.1:3615`) was detected and suggested as the address. The public HTTPS check verified the health endpoint and page against the exact running server instance. An unrouted address was rejected.
+- With the bundled connector removed, the pinned `cloudflared-windows-amd64.exe` 2026.7.3 was downloaded from GitHub and accepted only after its size and SHA-256 matched the runtime manifest.
+- In-place silent upgrade from 0.11.0: library, saved tunnel credential and public address were preserved. The upgraded server reported 0.11.3 locally and through its public HTTPS address, and the host executable carries file version 0.11.3.0.
+
+Limitations: the full installed-application suite runs on disposable CI runners and was not rerun for this build; the stop-old-service action was not exercised on a machine with a cloudflared Windows service; the installer is unsigned.
+
+---
+
 # Lumio Stream 0.11.2 Linux verification
 
 Built from private branch `linux`, commit `2eb75ab8e152b41bd619e809b786b0e83c957e41`, by the private GitHub Actions "Linux baseline" run `43067248394` on Ubuntu 24.04 x86_64. The published files are byte-identical to the packages that run built and verified (SHA-256 checked after transfer). Disposable test accounts and generated media only; no personal library or account was used.

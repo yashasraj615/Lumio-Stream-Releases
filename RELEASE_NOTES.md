@@ -1,3 +1,26 @@
+# Lumio Stream 0.11.3 · Windows update: simpler Cloudflare connection
+
+This Windows x64 update makes remote access setup a clear two-step flow. Mac stays at 0.11.0, the Android and Android TV clients at 0.11.1, and Linux at 0.11.2.
+
+## Connections, one step at a time
+
+1. **Connect your Cloudflare tunnel.** Create a tunnel in Cloudflare, copy the Windows installation command it shows (for example `cloudflared.exe service install eyJ…`) and paste it. Lumio reads only the token from it (the command is never executed), starts its own bundled cloudflared without administrator rights, and waits until Cloudflare has registered the connector for that exact tunnel.
+2. **Add your public address.** This step opens once the tunnel is connected. Add a public hostname route in Cloudflare (service type HTTP, URL `127.0.0.1:3615`). Lumio notices the route within seconds and fills in the address. Connect & verify saves it only after the public HTTPS request reaches your own server. Otherwise it explains what to fix and keeps your previous address.
+
+## Also in this update
+
+- A new hostname no longer shows as failing just because your router still caches it as "does not exist": the check also asks Cloudflare's and Google's public DNS resolvers.
+- If Lumio's bundled cloudflared is missing (for example removed by antivirus), Lumio downloads the official pinned version and accepts it only if its SHA-256 matches.
+- If you already installed cloudflared as a Windows service by following Cloudflare's instructions, Lumio uses it when it runs the same tunnel. Otherwise Lumio offers to stop and disable it (with a Windows administrator prompt; nothing is deleted).
+- Full Windows paths such as `"C:\Program Files (x86)\cloudflared\cloudflared.exe" …`, and the bare token, are accepted. Pasting the same command again does not interrupt a working connection.
+- Clear messages when Cloudflare rejects a token, a tunnel was deleted, or a firewall blocks the connector.
+
+## Upgrading
+
+Run `Lumio-Stream-Windows-v0.11.3.exe`. It upgrades 0.11.0 in place and keeps your library, accounts, history, saved tunnel and public address. The installer is unsigned, so SmartScreen may show an unknown publisher; verify the SHA-256 in `SHA256SUMS.txt` first.
+
+---
+
 # Lumio Stream 0.11.2 · Linux server edition
 
 Lumio Stream now runs on Linux desktops and headless servers, with the same media server, Media Center, Administration and features as the Mac and Windows editions. Mac and Windows stay at 0.11.0; the Android and Android TV clients stay at 0.11.1 and connect to a Linux server the same way.

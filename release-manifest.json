@@ -1,72 +1,40 @@
 {
   "product": "Lumio Stream",
-  "version": "0.11.2",
-  "buildDate": "2026-11-11T17:23:00Z",
+  "version": "0.11.3",
+  "buildDate": "2026-11-15T17:29:05.457Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
-  "sourceBranch": "linux",
-  "sourceCommit": "2eb75ab8e152b41bd619e809b786b0e83c957e41",
-  "status": "Linux server edition preview. Mac and Windows remain at 0.11.0; Android and Android TV clients at 0.11.1.",
+  "sourceBranch": "windows",
+  "sourceCommit": "87991c1c9e6861738ea096af92f75f16a5a458f5",
+  "status": "Windows x64 update: two-step Cloudflare connection setup. Mac stays at 0.11.0, Android/Android TV at 0.11.1, Linux at 0.11.2.",
   "runtime": {
-    "jellyfin": "12.3 (official linux-amd64 build)",
-    "ffmpeg": "jellyfin-ffmpeg 7.1.4-3 portable linux64-gpl",
-    "cloudflared": "2026.7.3 linux-amd64"
+    "jellyfin": "12.3 (official Windows x64 portable build)",
+    "ffmpeg": "jellyfin-ffmpeg 7.1.4-3 portable win64",
+    "cloudflared": "2026.7.3 windows-amd64"
   },
   "checks": {
-    "installedPackage": "Ubuntu 24.04 (GitHub-hosted runner) with a real systemd user session and Xvfb: 17 installed-package checks passed, from deb install through upgrade and removal.",
-    "headless": "Fedora 41 and Debian 12 containers without systemd or a display: rpm/deb install, server setup, ready status, stop and quit as an unprivileged user."
+    "unitTests": "17 Windows baseline unit tests pass (connection, tunnel, planes, windows); production build and typecheck pass.",
+    "liveTunnel": "On a physical Windows 11 PC with a real Cloudflare tunnel: the pasted Windows command registered the bundled connector in about 1 s with the matching tunnel ID; the route Cloudflare pushed was detected and suggested; the public HTTPS address verified against the exact server instance; a wrong address was rejected.",
+    "connectorDownload": "With the bundled connector removed, the pinned cloudflared-windows-amd64.exe was downloaded from GitHub and accepted only after its size and SHA-256 matched.",
+    "installedUpgrade": "In-place silent NSIS upgrade from 0.11.0 on the same PC preserved the library, saved tunnel and public address; the upgraded server reported 0.11.3 locally and through its public HTTPS address."
   },
   "limitations": [
-    "Tested on Ubuntu 24.04, Debian 12 and Fedora 41. Other distributions are expected to work but were not tested.",
-    "Hosted Ubuntu runner under Xvfb; physical GPUs (VA-API, NVENC, Quick Sync) were not qualified.",
-    "No public Cloudflare tunnel was configured during verification.",
-    "x86_64 only in this release; arm64 runtimes are pinned but no arm64 package is published.",
-    "Packages are unsigned; verify the SHA-256 before installing."
+    "Unsigned installer; SmartScreen may show an unknown publisher. Verify the SHA-256 before installing.",
+    "The full installed-application suite (windows-e2e) runs on disposable CI runners and was not rerun for this build.",
+    "The stop-old-cloudflared-service action (UAC prompt) was not exercised on a machine with such a service installed.",
+    "Windows x64 only."
   ],
   "artifacts": [
     {
-      "file": "Lumio-Stream-Linux-v0.11.2-x86_64.AppImage",
-      "size": 361695641,
-      "sha256": "d89004040d7d58ea9bcb9ab22c0b203ec2afcec8162ded779d5eefc21e13c91a",
-      "format": "AppImage",
-      "platform": "Linux",
-      "architecture": "x86_64",
-      "role": "Media server host: the same Lumio Stream server, Media Center and Administration as the Mac and Windows editions",
-      "service": "Per-user systemd service (sign-in start, optional start at boot via linger); detached fallback without systemd",
-      "sourceBranch": "linux",
-      "sourceCommit": "2eb75ab8e152b41bd619e809b786b0e83c957e41",
-      "verificationRun": "https://github.com/yashasraj615/Lumio-Stream/actions/runs/43067248394 (private)",
-      "intendedFor": "Most current x86_64 desktop and server distributions; no installation required"
-    },
-    {
-      "file": "Lumio-Stream-Linux-v0.11.2-amd64.deb",
-      "size": 292489408,
-      "sha256": "ba88b6fbc0e47891e84a4e9dbfad3bd6800cfe9fc1acdf5c76333676f045fc91",
-      "format": "Debian package",
-      "platform": "Linux",
-      "architecture": "x86_64",
-      "role": "Media server host: the same Lumio Stream server, Media Center and Administration as the Mac and Windows editions",
-      "service": "Per-user systemd service (sign-in start, optional start at boot via linger); detached fallback without systemd",
-      "sourceBranch": "linux",
-      "sourceCommit": "2eb75ab8e152b41bd619e809b786b0e83c957e41",
-      "verificationRun": "https://github.com/yashasraj615/Lumio-Stream/actions/runs/43067248394 (private)",
-      "intendedFor": "Ubuntu 22.04+, Debian 12+, Linux Mint, Pop!_OS and other Debian-based systems"
-    },
-    {
-      "file": "Lumio-Stream-Linux-v0.11.2-x86_64.rpm",
-      "size": 262278513,
-      "sha256": "48ed3f0e9bf59a5b94095c1ac1f6795f71b206705a719c4afa8d30f9eb205790",
-      "format": "RPM package",
-      "platform": "Linux",
-      "architecture": "x86_64",
-      "role": "Media server host: the same Lumio Stream server, Media Center and Administration as the Mac and Windows editions",
-      "service": "Per-user systemd service (sign-in start, optional start at boot via linger); detached fallback without systemd",
-      "sourceBranch": "linux",
-      "sourceCommit": "2eb75ab8e152b41bd619e809b786b0e83c957e41",
-      "verificationRun": "https://github.com/yashasraj615/Lumio-Stream/actions/runs/43067248394 (private)",
-      "intendedFor": "Fedora 39+, RHEL/Rocky/AlmaLinux 9+, openSUSE and other RPM-based systems"
+      "file": "Lumio-Stream-Windows-v0.11.3.exe",
+      "size": 440549228,
+      "sha256": "a089c04790f224e40d2f1e67b0082db1b22e56ba804b1116cdf3af6f2a29cf25",
+      "format": "NSIS installer",
+      "platform": "Windows",
+      "architecture": "x64",
+      "role": "Media server host: Lumio Stream server, Media Center and Administration",
+      "sourceBranch": "windows",
+      "sourceCommit": "87991c1c9e6861738ea096af92f75f16a5a458f5",
+      "intendedFor": "Windows 10 and 11 x64, per-user install without elevation; upgrades 0.11.0 in place"
     }
-  ],
-  "platforms": [
-    "Linux"
   ]
 }
