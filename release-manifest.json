@@ -1,40 +1,40 @@
 {
   "product": "Lumio Stream",
-  "version": "0.11.3",
-  "buildDate": "2026-11-15T17:29:05.457Z",
+  "version": "0.11.4",
+  "buildDate": "2026-11-15T18:41:57.117Z",
   "sourceRepository": "https://github.com/yashasraj615/Lumio-Stream",
   "sourceBranch": "windows",
-  "sourceCommit": "87991c1c9e6861738ea096af92f75f16a5a458f5",
-  "status": "Windows x64 update: two-step Cloudflare connection setup. Mac stays at 0.11.0, Android/Android TV at 0.11.1, Linux at 0.11.2.",
+  "sourceCommit": "f996a4f8cc8831d6b0eceed47572d61f1db27e43",
+  "status": "Windows x64 fix release: no visible engine console; Preserve existing folder structure accepts real TV layouts. Mac stays at 0.11.0, Android/Android TV at 0.11.1, Linux at 0.11.2.",
   "runtime": {
     "jellyfin": "12.3 (official Windows x64 portable build)",
     "ffmpeg": "jellyfin-ffmpeg 7.1.4-3 portable win64",
     "cloudflared": "2026.7.3 windows-amd64"
   },
   "checks": {
-    "unitTests": "17 Windows baseline unit tests pass (connection, tunnel, planes, windows); production build and typecheck pass.",
-    "liveTunnel": "On a physical Windows 11 PC with a real Cloudflare tunnel: the pasted Windows command registered the bundled connector in about 1 s with the matching tunnel ID; the route Cloudflare pushed was detected and suggested; the public HTTPS address verified against the exact server instance; a wrong address was rejected.",
-    "connectorDownload": "With the bundled connector removed, the pinned cloudflared-windows-amd64.exe was downloaded from GitHub and accepted only after its size and SHA-256 matched.",
-    "installedUpgrade": "In-place silent NSIS upgrade from 0.11.0 on the same PC preserved the library, saved tunnel and public address; the upgraded server reported 0.11.3 locally and through its public HTTPS address."
+    "unitTests": "19 Windows baseline unit tests pass (connection, tunnel, preserved structure, planes, windows); typecheck and production build pass.",
+    "engineConsole": "On a physical Windows 11 PC with Windows Terminal as the default terminal, the media engine runs in a headless pseudoconsole: no visible window, output relayed, and a graceful stop logs Jellyfin database shutdown and exits 0.",
+    "preservedStructure": "The preserved-structure TV classifier accepted the developer's real mixed library layout that 0.11.3 rejected, choosing engine roots that already index 2,083 of 2,084 files.",
+    "installedUpgrade": "In-place silent upgrade from 0.11.3 preserved library, tunnel and public address; the server reported 0.11.4 locally and through its public HTTPS address."
   },
   "limitations": [
     "Unsigned installer; SmartScreen may show an unknown publisher. Verify the SHA-256 before installing.",
     "The full installed-application suite (windows-e2e) runs on disposable CI runners and was not rerun for this build.",
-    "The stop-old-cloudflared-service action (UAC prompt) was not exercised on a machine with such a service installed.",
+    "Saving a preserved TV library end to end in Administration was not driven by automation; the classifier was verified on the real folders and in unit tests.",
     "Windows x64 only."
   ],
   "artifacts": [
     {
-      "file": "Lumio-Stream-Windows-v0.11.3.exe",
-      "size": 440549228,
-      "sha256": "a089c04790f224e40d2f1e67b0082db1b22e56ba804b1116cdf3af6f2a29cf25",
+      "file": "Lumio-Stream-Windows-v0.11.4.exe",
+      "size": 440551791,
+      "sha256": "e7ca44a319ae67fca16d8b14d1f836974ad39ceff484e7446df5b6b7d0913050",
       "format": "NSIS installer",
       "platform": "Windows",
       "architecture": "x64",
       "role": "Media server host: Lumio Stream server, Media Center and Administration",
       "sourceBranch": "windows",
-      "sourceCommit": "87991c1c9e6861738ea096af92f75f16a5a458f5",
-      "intendedFor": "Windows 10 and 11 x64, per-user install without elevation; upgrades 0.11.0 in place"
+      "sourceCommit": "f996a4f8cc8831d6b0eceed47572d61f1db27e43",
+      "intendedFor": "Windows 10 and 11 x64, per-user install without elevation; upgrades 0.11.x in place"
     }
   ]
 }

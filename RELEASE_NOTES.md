@@ -1,3 +1,21 @@
+# Lumio Stream 0.11.4 · Windows fixes: no console window, simpler preserved folders
+
+A Windows x64 fix release. Mac stays at 0.11.0, the Android and Android TV clients at 0.11.1, and Linux at 0.11.2.
+
+## No more terminal window
+
+On Windows 11, where Windows Terminal is the default terminal, a terminal window titled `…\vendor\jellyfin\jellyfin.exe` stayed open while Lumio ran, and closing it stopped the media server. The media engine now runs in an invisible console that has no window at all. Lumio still shuts the engine down cleanly so your library database is never cut off mid-write.
+
+## Preserve existing folder structure just works
+
+Ticking **Preserve existing folder structure** for a TV library no longer asks you to rearrange or classify folders. Libraries that mix series with franchise folders (for example `Friends S1 to S10` next to `Ben 10/Ben 10 Alien Force/…`) save as they are. Names like `Show S1`, `Show Season 1`, `Episode 1` and `Ep. 1` are recognised. The Media Center shows your folders exactly as they are on disk.
+
+## Upgrading
+
+Run `Lumio-Stream-Windows-v0.11.4.exe`. It upgrades 0.11.x in place and keeps your library, accounts, history, tunnel and public address. The installer is unsigned, so SmartScreen may show an unknown publisher; verify the SHA-256 in `SHA256SUMS.txt` first.
+
+---
+
 # Lumio Stream 0.11.3 · Windows update: simpler Cloudflare connection
 
 This Windows x64 update makes remote access setup a clear two-step flow. Mac stays at 0.11.0, the Android and Android TV clients at 0.11.1, and Linux at 0.11.2.

@@ -1,3 +1,16 @@
+# Lumio Stream 0.11.4 Windows verification
+
+Built on a physical Windows 11 Pro x64 PC (Windows Terminal is the default terminal) from private branch `windows`, commit `f996a4f`.
+
+- Windows baseline unit tests: 19 pass, including new preserved-structure layout tests. Typecheck and production build pass.
+- Engine console: the installed server runs jellyfin.exe in a headless pseudoconsole (`conhost.exe --headless`). No console or Windows Terminal window appears, and the only visible Lumio window is Administration. A graceful stop logged Jellyfin's "Preparing the database for shutdown" and the server exited with code 0. A stand-in engine confirmed output relaying and CTRL+BREAK delivery over three runs; the 0.11.3 host showed a Windows Terminal window in the same test.
+- Preserve existing folder structure: the TV classifier accepted the real mixed library layout that 0.11.3 rejected. It chose the engine roots that already index 2,083 of 2,084 video files in that library.
+- In-place silent upgrade from 0.11.3: library, tunnel and public address preserved. The server reported 0.11.4 locally and through its public HTTPS address.
+
+Limitations: saving a preserved TV library in Administration was not driven by automation; the full installed-application suite runs on disposable CI runners and was not rerun; the installer is unsigned.
+
+---
+
 # Lumio Stream 0.11.3 Windows verification
 
 Built on a physical Windows 11 Pro x64 PC from private branch `windows`, commit `87991c1`. The published EXE is the file checked below.

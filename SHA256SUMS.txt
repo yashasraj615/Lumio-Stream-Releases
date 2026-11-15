@@ -1,1 +1,1 @@
-a089c04790f224e40d2f1e67b0082db1b22e56ba804b1116cdf3af6f2a29cf25  Lumio-Stream-Windows-v0.11.3.exe
+e7ca44a319ae67fca16d8b14d1f836974ad39ceff484e7446df5b6b7d0913050  Lumio-Stream-Windows-v0.11.4.exe
